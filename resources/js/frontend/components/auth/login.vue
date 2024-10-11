@@ -1,15 +1,13 @@
 <template>
     <div>
-        <header class="py-4 text-center">
-            <h1>Welcome to Icbc Network</h1>
+        <header class="py-4 text-center text-primary">
+            <h1    style="font-family: 'Hind Siliguri', sans-serif;">আইসিবিসি নেটওয়ার্কে স্বাগতম</h1>
         </header>
 
         <form @submit.prevent="login" class="px-3">
-            <div class="input-group mb-3">
-                <!-- <span class="input-group-text py-3" id="basic-addon1"><i class="fa-solid fa-mobile-screen"></i></span> -->
-
+            <div     style="font-family: 'Hind Siliguri', sans-serif;" class="input-group mb-3">
                 <span
-                    class="input-group-text py-3"
+                    class="input-group-text border-primary py-3"
                     id="basic-addon1"
                     @click="showAllCountry"
                     ><img style="width: 20px" :src="flags" alt="" />{{
@@ -19,36 +17,40 @@
 
                 <input
                     type="text"
-                    class="form-control"
-                    placeholder="Enter Your Mobile Number"
+                    class="form-control border-primary"
+                    placeholder="আপনার মোবাইল নম্বর লিখুন"
                     @click="mobileCode == '' ? showAllCountry() : ''"
                     v-model="form.mobile"
                     aria-label="Username"
                     aria-describedby="basic-addon1"
+                       style="font-family: 'Hind Siliguri', sans-serif;"
                 />
             </div>
             <div class="input-group mb-3">
-                <span class="input-group-text py-3" id="basic-addon1"
+                <span class="input-group-text border-primary py-3" id="basic-addon1"
                     ><i class="fa-solid fa-lock"></i
                 ></span>
                 <input
                     type="password"
-                    class="form-control"
-                    placeholder="Enter Your Password"
+                    class="form-control border-primary"
+                    placeholder="আপনার পাসওয়ার্ড লিখুন"
                     aria-label="password"
                     v-model="form.password"
                     aria-describedby="basic-addon1"
+                       style="font-family: 'Hind Siliguri', sans-serif;"
                 />
             </div>
             <button
-                class="btn btn-danger w-100 py-3 defaltColorBg"
+                class="btn btn-primary w-100 py-3 "
                 type="submit"
+                   style="font-family: 'Hind Siliguri', sans-serif;"
             >
-                Login
+                লগইন করুন
             </button>
 
-            <router-link :to="{ name: 'register' }" class="btn text-info w-100"
-                >Register</router-link
+            <router-link :to="{ name: 'register' }" class="btn text-end text-primary w-100"
+                   style="font-family: 'Hind Siliguri', sans-serif;"
+                >নিবন্ধন করুন</router-link
             >
         </form>
 
@@ -63,11 +65,12 @@
                 <div class="searchcountry">
                     <input
                         type="text"
-                        placeholder="input Your Country name"
+                        placeholder="আপনার দেশের নাম লিখুন"
                         @keyup="searchCountry"
                         v-model="contryname"
                         autocomplete="off"
-                        class="form-control"
+                        class="form-control border-primary"
+                           style="font-family: 'Hind Siliguri', sans-serif;"
                     />
                 </div>
                 <ul>
@@ -247,10 +250,15 @@ export default {
 </script>
 
 <style lang="css" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
+
+
 .languagechange {
     width: 100px;
     float: right;
 }
+
 
 section.vh-100 {
     position: absolute;

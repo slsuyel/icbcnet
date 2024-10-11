@@ -3145,9 +3145,12 @@ var render = function render() {
       }
     }
   }, [_c("div", {
-    staticClass: "input-group mb-3"
+    staticClass: "input-group mb-3",
+    staticStyle: {
+      "font-family": "'Hind Siliguri', sans-serif"
+    }
   }, [_c("span", {
-    staticClass: "input-group-text py-3",
+    staticClass: "input-group-text border-primary py-3",
     attrs: {
       id: "basic-addon1"
     },
@@ -3169,10 +3172,13 @@ var render = function render() {
       value: _vm.form.mobile,
       expression: "form.mobile"
     }],
-    staticClass: "form-control",
+    staticClass: "form-control border-primary",
+    staticStyle: {
+      "font-family": "'Hind Siliguri', sans-serif"
+    },
     attrs: {
       type: "text",
-      placeholder: "Enter Your Mobile Number",
+      placeholder: "আপনার মোবাইল নম্বর লিখুন",
       "aria-label": "Username",
       "aria-describedby": "basic-addon1"
     },
@@ -3198,10 +3204,13 @@ var render = function render() {
       value: _vm.form.password,
       expression: "form.password"
     }],
-    staticClass: "form-control",
+    staticClass: "form-control border-primary",
+    staticStyle: {
+      "font-family": "'Hind Siliguri', sans-serif"
+    },
     attrs: {
       type: "password",
-      placeholder: "Enter Your Password",
+      placeholder: "আপনার পাসওয়ার্ড লিখুন",
       "aria-label": "password",
       "aria-describedby": "basic-addon1"
     },
@@ -3216,18 +3225,24 @@ var render = function render() {
       }
     }
   })]), _vm._v(" "), _c("button", {
-    staticClass: "btn btn-danger w-100 py-3 defaltColorBg",
+    staticClass: "btn btn-primary w-100 py-3",
+    staticStyle: {
+      "font-family": "'Hind Siliguri', sans-serif"
+    },
     attrs: {
       type: "submit"
     }
-  }, [_vm._v("\n            Login\n        ")]), _vm._v(" "), _c("router-link", {
-    staticClass: "btn text-info w-100",
+  }, [_vm._v("\n            লগইন করুন\n        ")]), _vm._v(" "), _c("router-link", {
+    staticClass: "btn text-end text-primary w-100",
+    staticStyle: {
+      "font-family": "'Hind Siliguri', sans-serif"
+    },
     attrs: {
       to: {
         name: "register"
       }
     }
-  }, [_vm._v("Register")])], 1), _vm._v(" "), _c("Preload", {
+  }, [_vm._v("নিবন্ধন করুন")])], 1), _vm._v(" "), _c("Preload", {
     attrs: {
       Isactive: _vm.isActive
     }
@@ -3254,10 +3269,13 @@ var render = function render() {
       value: _vm.contryname,
       expression: "contryname"
     }],
-    staticClass: "form-control",
+    staticClass: "form-control border-primary",
+    staticStyle: {
+      "font-family": "'Hind Siliguri', sans-serif"
+    },
     attrs: {
       type: "text",
-      placeholder: "input Your Country name",
+      placeholder: "আপনার দেশের নাম লিখুন",
       autocomplete: "off"
     },
     domProps: {
@@ -3292,14 +3310,18 @@ var staticRenderFns = [function () {
       _c = _vm._self._c;
 
   return _c("header", {
-    staticClass: "py-4 text-center"
-  }, [_c("h1", [_vm._v("Welcome to Icbc Network")])]);
+    staticClass: "py-4 text-center text-primary"
+  }, [_c("h1", {
+    staticStyle: {
+      "font-family": "'Hind Siliguri', sans-serif"
+    }
+  }, [_vm._v("আইসিবিসি নেটওয়ার্কে স্বাগতম")])]);
 }, function () {
   var _vm = this,
       _c = _vm._self._c;
 
   return _c("span", {
-    staticClass: "input-group-text py-3",
+    staticClass: "input-group-text border-primary py-3",
     attrs: {
       id: "basic-addon1"
     }
@@ -15853,6 +15875,7 @@ __webpack_require__.r(__webpack_exports__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap);"]);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "\n.languagechange[data-v-2a1c1b9c] {\r\n    width: 100px;\r\n    float: right;\n}\nsection.vh-100[data-v-2a1c1b9c] {\r\n    position: absolute;\r\n    top: 50%;\r\n    left: 50%;\r\n    transform: translate(-50%, -50%);\r\n    width: 100%;\n}\n.blurerror input[data-v-2a1c1b9c] {\r\n    border: 1px solid red !important;\n}\n.blurerror label[data-v-2a1c1b9c] {\r\n    color: red !important;\n}\n.blursuccess input[data-v-2a1c1b9c] {\r\n    border: 1px solid green !important;\n}\n.blursuccess label[data-v-2a1c1b9c] {\r\n    color: green !important;\n}\n.divider[data-v-2a1c1b9c]:after,\r\n.divider[data-v-2a1c1b9c]:before {\r\n    content: \"\";\r\n    flex: 1;\r\n    height: 1px;\r\n    background: #eee;\n}\n*[data-v-2a1c1b9c],\r\n*[data-v-2a1c1b9c]:focus {\r\n    outline: none;\n}\r\n\r\n/* .form{\r\n  width: 500px;\r\n  margin: 0 auto;\r\n  margin-top: 150px;\r\n  font-family: sans-serif;\r\n  background: #fff\r\n} */\n.form-item[data-v-2a1c1b9c] {\r\n    position: relative;\r\n    margin-bottom: 15px;\n}\n.form-item input[data-v-2a1c1b9c] {\r\n    display: block;\r\n    width: 100%;\r\n    height: 40px;\r\n    background: transparent;\r\n    border: solid 1px #ccc;\r\n    transition: all 0.3s ease;\r\n    padding: 0 15px;\n}\n.form-item input[data-v-2a1c1b9c]:focus {\r\n    border-color: blue;\n}\n.form-item label[data-v-2a1c1b9c] {\r\n    position: absolute;\r\n    cursor: text;\r\n    z-index: 2;\r\n    top: 13px;\r\n    left: 10px;\r\n    font-size: 12px;\r\n    font-weight: bold;\r\n    background: #fff;\r\n    padding: 0 10px;\r\n    color: #999;\r\n    transition: all 0.3s ease;\n}\n.form-item input:focus + label[data-v-2a1c1b9c],\r\n.form-item input:valid + label[data-v-2a1c1b9c] {\r\n    font-size: 11px;\r\n    top: -5px;\n}\n.form-item input:focus + label[data-v-2a1c1b9c] {\r\n    color: blue;\n}\n.countrycover[data-v-2a1c1b9c] {\r\n    width: 100%;\r\n    height: 100%;\r\n    position: fixed;\r\n    background: #0000009c;\r\n    top: 0;\r\n    left: 0;\n}\n.countrylist[data-v-2a1c1b9c] {\r\n    position: fixed;\r\n    top: 39%;\r\n    left: 0;\r\n    width: 100%;\r\n    /* margin: 29px; */\r\n    background: #ffffff;\r\n    overflow: auto;\r\n    border-radius: 12px;\n}\n.countrylist ul[data-v-2a1c1b9c] {\r\n    list-style: none;\r\n    overflow: auto;\r\n    height: 226px;\r\n    padding: 0;\n}\n.countrylist ul li[data-v-2a1c1b9c] {\r\n    padding: 5px 27px;\r\n    border-bottom: 1px solid #6a6a6a;\r\n    cursor: pointer;\r\n    display: flex;\r\n    justify-content: space-between;\n}\n.countrylist ul li[data-v-2a1c1b9c]:hover {\r\n    background: #c1c1c1;\n}\n.countrylist ul li img[data-v-2a1c1b9c] {\r\n    width: 20px;\n}\n.countryHead[data-v-2a1c1b9c] {\r\n    border-bottom: 1px solid #666666;\r\n    padding: 11px 20px;\r\n    text-align: right;\n}\n.countryHead span[data-v-2a1c1b9c] {\r\n    width: 10px;\r\n    height: 10px;\r\n    background: red;\r\n    padding: 3px 7px;\r\n    border-radius: 50%;\r\n    color: white;\r\n    cursor: pointer;\n}\n.searchcountry input[data-v-2a1c1b9c] {\r\n    width: 95%;\r\n    margin: 8px auto;\r\n    border: 1px solid black;\n}\r\n", ""]);
 // Exports

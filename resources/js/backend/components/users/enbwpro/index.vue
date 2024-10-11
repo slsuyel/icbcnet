@@ -103,9 +103,11 @@
 
     <div class="parters">
 
-        <h4>Our Partners</h4>
+        <h4> Gallery</h4>
 
-        <img :src="$asseturl+'parters.jpg'" width="90%" alt="">
+        <!-- <img :src="$asseturl+'parters.jpg'" width="90%" alt=""> -->
+        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXdnZ2ZndXQyaXJ2bzNyZ2p6aDRuODN0eGx2OHlhaXJwZnp1eDNtayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/allxMZ0wV4fZ4ljzR3/giphy.webp" class=" w-100 mx-auto" alt="GIF Image">
+
     </div>
 
   </main>
