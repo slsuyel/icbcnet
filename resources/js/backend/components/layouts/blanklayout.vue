@@ -1,51 +1,44 @@
 <template>
     <div class="mainContainer">
-
         <slot></slot>
 
-
         <footer class="fixed-footer mt-4 pt-5">
-        <div class="text-center fixed-footer-bg border-top d-flex footer-row justify-content-around mt-3 pt-3 px-3"
-            style="position: fixed; bottom: 0; width: 100%;background: white; margin-left: 0;">
-            <router-link :to="{name:'Authuser'}" class="defaltColor navLink">
-                <i class="fa-solid fa-cloud"></i>
-                <p>Home</p>
-            </router-link>
+            <div class="text-center fixed-footer-bg border-top d-flex footer-row justify-content-around mt-3 pt-3 px-3"
+                style="position: fixed; bottom: 0; width: 100%; background: white; margin-left: 0;">
+                
+                <router-link :to="{name:'Authuser'} " style="font-family: 'Hind Siliguri', sans-serif;" class="defaltColor navLink">
+                    <i class="fa-solid fa-house"></i>
 
-            <router-link :to="{name:'package'}" class="defaltColor navLink">
-                <i class="fa-solid fa-truck-fast"></i>
-                <p>Vip</p>
-            </router-link>
+                    <p>হোম</p>
+                </router-link>
 
-            <router-link :to="{name:'Earning'}" class="defaltColor navLink">
-                <i class="fa-regular fa-circle-check"></i>
-                <p>Earning</p>
-            </router-link>
+                <router-link :to="{name:'package'}"  class="defaltColor navLink">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <p>পণ্য</p>
+                </router-link>
 
-            <router-link :to="{name:'support'}" class="defaltColor navLink">
-                <!-- <i class="fa-solid fa-circle-exclamation"></i> -->
-                <img style="width: 30px;filter: hue-rotate(77deg);" src="https://www.seekpng.com/png/detail/851-8517093_it-support-company-technical-support-icon.png" alt="">
-                <p>Service</p>
-            </router-link>
+                <router-link :to="{name:'Earning'}"   class="defaltColor navLink">
+                    <i class="fa-regular fa-circle-check"></i>
+                    <p>আয়</p>
+                </router-link>
 
+                <router-link :to="{name:'support'}"  class="defaltColor navLink">
+                    <img style="width: 30px; filter: hue-rotate(77deg);" src="https://www.seekpng.com/png/detail/851-8517093_it-support-company-technical-support-icon.png" alt="">
+                    <p>সেবা</p>
+                </router-link>
 
-            <router-link :to="{name:'account'}" class="defaltColor navLink">
-                <i class="fa-brands fa-meetup"></i>
-                <p>My</p>
-            </router-link>
+                <router-link :to="{name:'account'}"  class="defaltColor navLink">
+                    <i class="fa-brands fa-meetup"></i>
+                    <p>প্রোফাইল</p>
+                </router-link>
 
+            </div>
+        </footer>
 
-        </div>
-    </footer>
-
-
-                    <Preload :Isactive="isActive"/>
-                </div>
-
-
-
-
+        <Preload :Isactive="isActive" />
+    </div>
 </template>
+
 <script>
   export default {
 
@@ -116,6 +109,11 @@
   }
 </script>
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
+
+
 
 .surePopup {
     position: fixed;

@@ -1,25 +1,19 @@
 <template>
-    <div>
+        <div>
+    
+            <header class="header-text mb-5 defaltColorBg" style="margin-bottom: -16px;">
+                <p class="py-2 text-white" style="font-family: 'Hind Siliguri', sans-serif;">আমাদের সম্পর্কে</p>
+            </header>
+            <main class="mb-5 pb-5 px-4" style="font-family: 'Hind Siliguri', sans-serif;">
+                <p>ICBC নেটওয়ার্ক একটি কোম্পানি যা 10টি ছাদে সোলার এনার্জি বেস তৈরি করে। আমরা যে মৌলিক প্রযুক্তি উদ্ভাবন করি, তা প্রযুক্তি লাইসেন্সিং মডেলের মাধ্যমে পুরো শিল্পের সাথে শেয়ার করি এবং গ্রাহক ও অংশীদারদের জন্য বৈশ্বিক উদ্ভাবন, প্রতিযোগিতা এবং উন্নয়নের জন্য একটি শক্তিশালী সমর্থন হয়ে উঠি। 1983 সালে শুরু হওয়া, এই মডেলটি Qualcomm-এর মূল মিশন, মূল্যবোধ এবং সংস্কৃতির ভিত্তি, যা বাজারের শক্তিশালী বৃদ্ধি এবং সোলার এনার্জির ভোক্তাদের উপকারে সহায়তা করে।</p>
+                <p>ICBC নেটওয়ার্ক একটি কোম্পানি যা 10টি ছাদে ICBC নেটওয়ার্ক বেস স্টেশন তৈরি করে। আমরা যে মৌলিক প্রযুক্তি উদ্ভাবন করি, তা প্রযুক্তি লাইসেন্সিং মডেলের মাধ্যমে পুরো সোলার শিল্পের সাথে শেয়ার করি এবং গ্রাহক ও অংশীদারদের জন্য বৈশ্বিক উদ্ভাবন, প্রতিযোগিতা এবং উন্নয়নের জন্য একটি শক্তিশালী সমর্থন হয়ে উঠি।</p>
+                <p>1983 সালে শুরু হওয়া, এই মডেলটি Qualcomm-এর মূল মিশন, মূল্যবোধ এবং সংস্কৃতির ভিত্তি, যা বাজারের শক্তিশালী বৃদ্ধি এবং সোলার এনার্জির ভোক্তাদের উপকারে সহায়তা করে।</p>
+                <p>ICBC নেটওয়ার্ক একটি কোম্পানি যা ছাদে ICBC নেটওয়ার্ক বেস তৈরি করে। আমরা যে মৌলিক প্রযুক্তি উদ্ভাবন করি, তা প্রযুক্তি লাইসেন্সিং মডেলের মাধ্যমে পুরো শিল্পের সাথে শেয়ার করি এবং গ্রাহক ও অংশীদারদের জন্য বৈশ্বিক উদ্ভাবন, প্রতিযোগিতা এবং উন্নয়নের জন্য একটি শক্তিশালী সমর্থন হয়ে উঠি।</p>
+                <p>1983 সালে শুরু হওয়া, এই মডেলটি Qualcomm-এর মূল মিশন, মূল্যবোধ এবং সংস্কৃতির ভিত্তি, যা বাজারের শক্তিশালী বৃদ্ধি এবং সোলার এনার্জির ভোক্তাদের উপকারে সহায়তা করে।</p>
+            </main>
+    
+        </div>
+    </template>
+    
 
-        <header class="header-text mb-5 defaltColorBg" style="margin-bottom: -16px;">
-        <p class="py-2 text-white"> about us </p>
-    </header>
-    <main class="mb-5 pb-5 px-4">
-        <p>Sun-EnergY is a company that manufactures 10 rooftop Sun-Energy bases.The fundamental technology we innovate, and share the innovations with the entire industry through the technology licensing model, and become a strong support for customers and partners for global innovation, competition and development. Started in 1983, this model is the foundation of Qualcomm's core mission, values ​​and culture, which continues to drive strong market growth and benefit consumers at Sun-Energy.
-</p>
-        <p>Sun-EnergY is a company that manufactures 10 rooftop Sun-EnergY base stations. The basic technology we innovate, and share the innovations with the entire solar industry through technology licensing model, and become a strong support for customers and partners for global innovation, competition and development.
-</p>
-        <p>Started in 1983, this model is the foundation of Qualcomm's core mission, values ​​and culture, which continues to drive strong market growth and benefit consumers at Sun-Energy.
-</p>
-        <p>Sun-EnergY is a company that manufactures rooftop Sun-EnergY bases. The fundamental technology we innovate, and share the innovations with the entire industry through the technology licensing model, and become a strong support for customers and partners for global innovation, competition and development.
-</p>
-
-        <p>Started in 1983, this model is the foundation of Qualcomm's core mission, values ​​and culture, which continues to drive strong market growth and benefit consumers at Sun-Energy
-        </p>
-
-
-    </main>
-
-
-    </div>
-</template>
+    

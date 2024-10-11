@@ -1,46 +1,37 @@
 <template>
     <div>
         <header class="header-text defaltColorBg" style="margin-bottom: -16px">
-            <p class="py-2 text-white">Earnings</p>
+            <p class="py-2 text-white">আয়</p>
         </header>
 
         <main class="main-bg-absulate">
-
-
-
-            <table border="1" width="100%" style="    width: 90%;
-    margin: 39px auto;
-    position: relative;">
-
+            <table border="1" width="100%" style="width: 90%; margin: 39px auto; position: relative;">
                 <thead>
                     <tr>
-                        <th style="border: 1px solid;">Daily Income</th>
-                        <th style="border: 1px solid;">Estimated Income</th>
-                        <th style="border: 1px solid;">Investment Price</th>
-                        <th style="border: 1px solid;">Income</th>
-                        <th style="border: 1px solid;">Valid</th>
+                        <th style="border: 1px solid;">দৈনিক আয়</th>
+                        <th style="border: 1px solid;">অনুমানিত আয়</th>
+                        <th style="border: 1px solid;">বিনিয়োগ মূল্য</th>
+                        <th style="border: 1px solid;">মোট আয়</th>
+                        <th style="border: 1px solid;">ভ্যালিড</th>
                     </tr>
                 </thead>
 
                 <tbody>
                     <tr v-for="(list,index) in lists" :key="index">
-                        <td  style="border: 1px solid;">৳{{ list.dailyearn }}</td>
-                        <td  style="border: 1px solid;">৳{{ list.estimatedEarn }}</td>
-                        <td  style="border: 1px solid;">৳{{ list.deposit }}</td>
-                        <td  style="border: 1px solid;">৳{{ list.totalEarn }}</td>
-                        <td  style="border: 1px solid;">{{ list.endDate }}</td>
+                        <td style="border: 1px solid;">৳{{ list.dailyearn }}</td>
+                        <td style="border: 1px solid;">৳{{ list.estimatedEarn }}</td>
+                        <td style="border: 1px solid;">৳{{ list.deposit }}</td>
+                        <td style="border: 1px solid;">৳{{ list.totalEarn }}</td>
+                        <td style="border: 1px solid;">{{ list.endDate }}</td>
                     </tr>
-
                 </tbody>
                 <tfoot>
                     <td colspan="6" style="text-align: center; border: 1px solid;">
                         <span>৳{{ earndata.user.receiveable }}</span><br>
-                        <button class="btn fw-bold mb-4 mt-2 rounded-0 text-white defaltColorBg" @click="orderSubmit">Collect</button>
+                        <button class="btn fw-bold mb-4 mt-2 rounded-0 text-white defaltColorBg" @click="orderSubmit">সংগ্রহ করুন</button>
                     </td>
                 </tfoot>
-
             </table>
-
         </main>
 
         <Preload :Isactive="isActive" />
@@ -55,7 +46,7 @@ export default {
             isActive: true,
             Messageactive: false,
             Message: "",
-            earndata: {user:{eceiveable:0}},
+            earndata: { user: { receiveable: 0 } },
             form: {},
             lists: {},
         };
@@ -98,9 +89,9 @@ export default {
             this.form["user_id"] = this.row.user.id;
             var res = await this.callApi("post", `/api/admin/task`, this.form);
             if (res.data == 444) {
-                this.notifiy(`Already Received`);
+                this.notifiy(`এটি ইতিমধ্যেই গ্রহণ করা হয়েছে`);
             } else {
-                this.notifiy("Received Completed");
+                this.notifiy("গ্রহণ সম্পন্ন");
             }
             this.getdata();
         },
@@ -112,7 +103,6 @@ export default {
 </script>
 
 <style scoped>
-
 .cotent {
     margin-bottom: 12px;
     background-color: #fff;
@@ -140,13 +130,11 @@ export default {
     overflow: hidden;
     justify-content: space-between;
 }
-
 .cotent .one {
     width: 100%;
     height: 200px;
     margin-bottom: 20px;
 }
-
 .cotent .to {
     display: flex;
     font-size: 15px;
@@ -177,5 +165,4 @@ export default {
     overflow: hidden;
     position: relative;
 }
-
 </style>

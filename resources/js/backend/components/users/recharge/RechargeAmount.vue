@@ -1,75 +1,120 @@
 <template>
     <div>
+        <header style="background: var(--defaltColor); padding: 7px 12px;">
+            <h1
+                class="text-white"
+                style="
+                    height: 44px;
+                    font-size: 16px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    font-weight: 700;
+                    display: flex;
+                    align-items: center;
+                "
+            >
+                রিচার্জ
+            </h1>
+        </header>
 
-
-        <header style=" background: var(--defaltColor);
-  padding: 7px 12px;">
-        <h1 class="text-white" style="height: 44px;
-    font-size: 16px;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-weight: 700;
-    display: flex;
-    align-items: center;">
-            Recharge
-        </h1>
-    </header>
-
-    <form @submit.stop.prevent="onSubmit">
-        <div style="padding: 0 12px;
-        background: linear-gradient(1turn, rgb(241, 243, 248), rgb(151 127 247) 58%, #B000FF);
-    ">
-            <!-- <div class="d-flex justify-content-between">
-                <p class="ms-3 balance">Balance</p>
-                <p class="fs-4 text-white">{{ parseFloat(row.user.balance).toFixed(2) }}</p>
-            </div> -->
-            <hr class="text-bg-dark" />
-            <div class="bg-white py-3 rounded-4 shadow-sm">
-                <p class="mb-0 text-center" style="color: #ff883a;">Please Select the ammount</p>
-                <div class="ammount-select">
-                    <p class="amount" :class="{ 'active':form.amount == 550 }" @click="form.amount = 550">550</p>
-                    <p class="amount" :class="{ 'active':form.amount == 1050 }" @click="form.amount = 1050">1050</p>
-                    <p class="amount" :class="{ 'active':form.amount == 2550 }" @click="form.amount = 2550">2550</p>
-                    <p class="amount" :class="{ 'active':form.amount == 6050 }" @click="form.amount = 6050">6050</p>
-                    <p class="amount" :class="{ 'active':form.amount == 10000 }" @click="form.amount = 10000">10000</p>
-                    <p class="amount" :class="{ 'active':form.amount == 25000 }" @click="form.amount = 25000">25000</p>
-
-                </div>
-                <div
-                    class="align-items-center border border-danger d-flex justify-content-between money-input mx-2 my-3 p-2 rounded-3 shadow-sm">
-                    <input class="border-0" maxlength="140" v-model="form.amount" step="0.000000000000000001" enterkeyhint="done"
-                        pattern="[0-9]*" autocomplete="off" type="number" placeholder="Please select the amount"   />
-                    <button type="submit" class="money-btn">Recharge</button>
+        <form @submit.stop.prevent="onSubmit">
+            <div
+                style="
+                    padding: 0 12px;
+                    background: linear-gradient(1turn, rgb(241, 243, 248), rgb(151 127 247) 58%, #B000FF);
+                "
+            >
+                <hr class="text-bg-dark" />
+                <div class="bg-white py-3 rounded-4 shadow-sm">
+                    <p class="mb-0 text-center" style="color: #ff883a;">অনুগ্রহ করে পরিমাণ নির্বাচন করুন</p>
+                    <div class="ammount-select">
+                        <p
+                            class="amount"
+                            :class="{ 'active': form.amount == 550 }"
+                            @click="form.amount = 550"
+                        >
+                            550
+                        </p>
+                        <p
+                            class="amount"
+                            :class="{ 'active': form.amount == 1050 }"
+                            @click="form.amount = 1050"
+                        >
+                            1050
+                        </p>
+                        <p
+                            class="amount"
+                            :class="{ 'active': form.amount == 2550 }"
+                            @click="form.amount = 2550"
+                        >
+                            2550
+                        </p>
+                        <p
+                            class="amount"
+                            :class="{ 'active': form.amount == 6050 }"
+                            @click="form.amount = 6050"
+                        >
+                            6050
+                        </p>
+                        <p
+                            class="amount"
+                            :class="{ 'active': form.amount == 10000 }"
+                            @click="form.amount = 10000"
+                        >
+                            10000
+                        </p>
+                        <p
+                            class="amount"
+                            :class="{ 'active': form.amount == 25000 }"
+                            @click="form.amount = 25000"
+                        >
+                            25000
+                        </p>
+                    </div>
+                    <div
+                        class="align-items-center border border-danger d-flex justify-content-between money-input mx-2 my-3 p-2 rounded-3 shadow-sm"
+                    >
+                        <input
+                            class="border-0"
+                            maxlength="140"
+                            v-model="form.amount"
+                            step="0.01"
+                            enterkeyhint="done"
+                            pattern="[0-9]*"
+                            autocomplete="off"
+                            type="number"
+                            placeholder="অনুগ্রহ করে পরিমাণ নির্বাচন করুন"
+                        />
+                        <button type="submit" class="money-btn">রিচার্জ</button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </form>
 
+        <footer class="bg-white mx-2 my-4 rounded-3 shadow-sm">
+            <p
+                class="text-start"
+                style="
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: #31323e;
+                "
+            >
+                রিচার্জ রেকর্ড
+            </p>
 
-    </form>
-
-
-    <footer class="bg-white mx-2 my-4 rounded-3 shadow-sm">
-
-            <p class="text-start" style="font-size: 18px;
-            font-weight: 500;
-            color: #31323e;">Recharge Record</p>
-
-        <div class=" px-4 py-2" v-for="rech in lists" :key="'rech'+rech.id">
-            <div class="d-flex justify-content-between">
-                <p><i class="fa-mobile-screen-button fa-solid me-1"></i> {{ rech.status }}</p>
-                <p>{{ rech.amount }}BDT</p>
+            <div
+                class="px-4 py-2"
+                v-for="rech in lists"
+                :key="'rech' + rech.id"
+            >
+                <div class="d-flex justify-content-between">
+                    <p><i class="fa-mobile-screen-button fa-solid me-1"></i> {{ rech.status }}</p>
+                    <p>{{ rech.amount }} BDT</p>
+                </div>
+                <p class="fs-6 mb-0 time">{{ dateformatglobal(rech.created_at)[6] }}</p>
             </div>
-            <p class="fs-6 mb-0 time">{{ dateformatglobal(rech.created_at)[6] }}</p>
-        </div>
-
-
-    </footer>
-
-
-
-
-
-
+        </footer>
     </div>
 </template>
 

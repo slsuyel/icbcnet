@@ -1,44 +1,40 @@
 <template>
     <div>
+        <header class="header-text" style="background-color: var(--defaltColor);margin-bottom: -16px;">
+            <p class="py-2 text-white">উইথড্র অ্যাকাউন্ট</p>
+        </header>
 
-    <header class="header-text" style="background-color: var(--defaltColor);margin-bottom: -16px;">
-        <p class="py-2 text-white">Withdrawal Account </p>
-    </header>
-
-
-   <form @submit.stop.prevent="onSubmit" class="mt-4 mx-2 text-center">
-        <div class="bg-white border mb-2 mt-4 mx-4 px-3 py-2 shadow">
-            <div class="input-group">
-                <span class="bg-white border-0 input-group-text">Realname:</span>
-                <input type="text"  v-model="row.user.name" :disabled="disabaled" aria-label="First name" class="form-control border-0">
-              </div>
-        </div>
-        <div class="bg-white border d-flex mx-4 mb-2 px-3 py-2 shadow">
-            <div class="">
-                <span class="bg-white border-0 input-group-text">Bank Code:</span>
+        <form @submit.stop.prevent="onSubmit" class="mt-4 mx-2 text-center">
+            <div class="bg-white border mb-2 mt-4 mx-4 px-3 py-2 shadow">
+                <div class="input-group">
+                    <span class="bg-white border-0 input-group-text">বাস্তব নাম:</span>
+                    <input type="text" v-model="row.user.name" :disabled="disabaled" aria-label="First name" class="form-control border-0">
+                </div>
             </div>
-            <div class="w-100">
-                <select v-model="row.user.Bank_Name" :disabled="disabaled" class="form-select border-0" aria-label="Default select example">
-                            <option value="">Select</option>
-                            <option v-for="get in getways" :key="'pay' + get.id" :value="get.id">{{ get.name }}</option>
-                        </select>
-
+            <div class="bg-white border d-flex mx-4 mb-2 px-3 py-2 shadow">
+                <div class="">
+                    <span class="bg-white border-0 input-group-text">ব্যাংক চ্যানেল:</span>
+                </div>
+                <div class="w-100">
+                    <select v-model="row.user.Bank_Name" :disabled="disabaled" class="form-select border-0" aria-label="Default select example">
+                        <option value="">নির্বাচন করুন</option>
+                        <option v-for="get in getways" :key="'pay' + get.id" :value="get.id">{{ get.name }}</option>
+                    </select>
+                </div>
             </div>
-        </div>
 
-        <div class="bg-white border mb-2 mx-4 px-3 py-2 shadow">
-            <div class="input-group">
-                <span class="bg-white border-0 input-group-text">Bank Account:</span>
-                <input type="number"  v-model="row.user.Bank_account" :disabled="disabaled" aria-label="First name" class="form-control border-0">
-              </div>
-        </div>
-        <div class="w-100 text-center px-4" v-if="!disabaled" >
-            <button class="btn fw-bold rounded-0 text-white w-100" style="background-color: var(--defaltColor);">save</button>
-        </div>
-   </form>
+            <div class="bg-white border mb-2 mx-4 px-3 py-2 shadow">
+                <div class="input-group">
+                    <span class="bg-white border-0 input-group-text">ব্যাংক অ্যাকাউন্ট/নাম্বার:</span>
+                    <input type="number" v-model="row.user.Bank_account" :disabled="disabaled" aria-label="First name" class="form-control border-0">
+                </div>
+            </div>
+            <div class="w-100 text-center px-4" v-if="!disabaled">
+                <button class="btn fw-bold rounded-0 text-white w-100" style="background-color: var(--defaltColor);">সংরক্ষণ করুন</button>
+            </div>
+        </form>
 
-
-   <Preload :Isactive="isActive" />
+        <Preload :Isactive="isActive" />
         <Message :Isactive="Messageactive" :Message="Message" />
     </div>
 </template>
