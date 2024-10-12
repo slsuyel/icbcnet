@@ -6,10 +6,10 @@
         </section>
 
         <header class="defaltColorBg py-2 rounded-bottom-4 text-white" >
-            <div class="align-items-center d-flex justify-content-between mx-2 pt-2 text-white">
+            <!-- <div class="align-items-center d-flex justify-content-between mx-2 pt-2 text-white">
                 <p class="fs-3"></p>
                 <a :href="$asseturl+''" class="app-download"><i class="fa-solid fa-download p-2"></i>অ্যাপ ডাউনলোড</a>
-            </div>
+            </div> -->
             <div class=" mt-2">
                 <div class="row mx-auto">
                     <div class="col-md-12">
