@@ -133,30 +133,28 @@
 
 <script>
 export default {
+
     created() {
+        // var daysName = this.dayName();
 
-        var daysName = this.dayName();
+        // if(daysName=='Sunday' || daysName=='Monday' || daysName=='Tuesday' || daysName=='Wednesday' || daysName=='Thursday'){
+        //     if(User.dateformat()[9]<=16){
+        //         if(User.dateformat()[9]>=10){
+        //         }else{
+        //             this.notifiy('Withdrawal Time Everyday 10am To 5pm.')
+        //             this.$router.push({ name: 'Authuser' });
+        //         }
+        //     }else{
+        //         this.notifiy('Withdrawal Time Everyday 10am To 5pm.')
+        //         this.$router.push({ name: 'Authuser' });
+        //     }
 
-        if(daysName=='Sunday' || daysName=='Monday' || daysName=='Tuesday' || daysName=='Wednesday' || daysName=='Thursday'){
-            if(User.dateformat()[9]<=16){
-                if(User.dateformat()[9]>=10){
-                }else{
-                    this.notifiy('Withdrawal Time Everyday 10am To 5pm.')
-                    this.$router.push({ name: 'Authuser' });
-                }
-            }else{
-                this.notifiy('Withdrawal Time Everyday 10am To 5pm.')
-                this.$router.push({ name: 'Authuser' });
-            }
-
-        }else{
-            alert('উত্তোলন শুক্রবার ও শনিবার বন্ধ')
-             this.$router.push({ name: 'Authuser' });
-        }
-
-
-
+        // }else{
+        //     alert('উত্তোলন শুক্রবার ও শনিবার বন্ধ')
+        //      this.$router.push({ name: 'Authuser' });
+        // }
     },
+
     data(){
         return {
             isActive:true,
