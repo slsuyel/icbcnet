@@ -109,7 +109,7 @@ class WithdrawalController extends Controller
 
         $withdrawCount = Withdrawal::where('user_id',$userid)->where("created_at","LIKE","%$created_at%")->count();
 
-        if($withdrawCount>0) return 445;
+        if($withdrawCount>5) return 445;
         if($userbalance<$method->min_amount) return 444;
 
 

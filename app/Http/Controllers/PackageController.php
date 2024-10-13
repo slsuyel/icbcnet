@@ -151,7 +151,7 @@ class PackageController extends Controller
 
         $Oldreceiveable = $user->receiveable;
 $receiveable = $Oldreceiveable+$request->packageEarn;
-        $user->update(['balance'=>$balance,'receiveable'=>$receiveable]);
+        $user->update(['balance'=>$balance,'receiveable'=>0]);
         return 1;
 
 

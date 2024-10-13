@@ -71,11 +71,10 @@ Route::post('refound', function (Request $request) {
 
     Route::post('daily/check/in', function (Request $request) {
 
+        return 0;
         $user_id = $request->user_id;
         $user = User::find($user_id);
-
         $checkin = $user->checkin;
-
 
         $task_comisition = rand(5,8);
 
@@ -96,10 +95,7 @@ Route::post('refound', function (Request $request) {
             Task::create($data);
             return 1;
         }
-
         return 0;
-
-
     });
 
 // Route::post('webhook', function (Request $request) {
