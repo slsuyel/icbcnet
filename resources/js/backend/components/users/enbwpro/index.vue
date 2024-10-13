@@ -49,10 +49,10 @@
                     <i class="fa-solid fa-briefcase" style="color: #9d00ff;"></i>
                     <p>উত্তোলন</p>
                 </router-link>
-                <span @click="dailyCheckIn" class="text-dark homePageIcon">
+                <!-- <span @click="dailyCheckIn" class="text-dark homePageIcon">
                     <i class="fa-solid fa-circle-check" style="color: #0066ff;"></i>
                     <p>চেক ইন</p>
-                </span>
+                </span> -->
                 <router-link :to="{name:'noreward'}" class="text-dark homePageIcon">
                     <i class="fa-solid fa-medal" style="color: #268300;"></i>
                     <p>বিনিয়োগ তথ্য</p>
